@@ -18,7 +18,7 @@ body {
 
 @import url('content-box.less');
 @import url('warranty-box.less');
-
+@import url('partners-box.less');
 @import url('page-footer-box.less');
 
 
@@ -50,6 +50,19 @@ h1 {
 	box-shadow: 0px 0px 10px -1px lighten(@thirdColor, 25%);
 }
 
+.partners-box .tab.active {
+	font-weight: normal;
+	&:after {
+		display: block;
+	}
+}
+
+.partners-box .tab-list-mode.active {
+	font-weight: normal;
+	&:after {
+		transform: rotate(180deg);
+	}
+}
 
 // width: 742px;
 // 	display: flex;

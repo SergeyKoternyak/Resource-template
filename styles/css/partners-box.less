@@ -1,0 +1,95 @@
+.partners-box {
+	background: @fourthColor;
+	text-align: center;
+	padding: 30px 0 0;
+	.description {
+		font-size: 17px;
+		font-style: italic;
+		margin: 20px 0 35px;
+	}
+	.partners-tabs {
+		width: 742px;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		user-select: none;
+	}
+	.tab {
+		font-weight: bold;
+		cursor: pointer;
+		font-size: 16px;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		height: 51px;
+		&:after {
+			content:'';
+			width: 30px;
+			height: 30px;
+			background: @fourthColor;
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			margin-left: -15px;
+			transform: rotate(45deg);
+			display: none;
+		}
+	}
+	.tabs-box {
+		background: @secondColor;
+	}
+	.tab-content {
+		padding: 20px;
+		display: none;
+	}
+	.tab-list-mode {
+		display: none;
+	}
+	.tab-content {
+		height: 150px;
+	}
+}
+
+@media screen and (max-width: 742px) {
+	.partners-box {
+		padding-bottom: 20px;
+		.description {
+			font-size: 22px;
+			margin: 20px 20px 35px;
+		}
+		.partners-tabs {
+			display: none;
+		}
+		.tab-list-mode {
+			padding: 20px 10px;
+			background: @fourthColor;
+			border-top: 1px solid @thirdColor;
+			color: @thirdColor;
+			text-align: left;
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: block;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			user-select: none;
+			position: relative;
+			&:after {
+				content: url(../imgs/arrow.png);
+				width: 18px;
+				height: 18px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				margin-top: -9px;
+			}
+		}
+		.tab-content {
+			border-top: 1px solid @thirdColor;
+			&:last-child {
+				border-bottom: 1px solid @thirdColor;
+			}
+		}
+	}
+}
