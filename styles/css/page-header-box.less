@@ -1,0 +1,38 @@
+.page-header-box {
+	width: 742px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+	padding: 20px 0;
+	.header-logo {
+		width: 240px;
+		height: 90px;
+	}
+	.address,
+	.phone-box {
+		text-align: center;
+	}
+	.phone-number {
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 742px) {
+	.page-header-box {
+		width: 320px;
+		padding: 10px;
+		.header-logo {
+			width: 120px;
+			height: 45px;
+		}
+		.address {
+			display: none;
+		}
+		.phone-number {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+}
