@@ -1,0 +1,134 @@
+.content-box {
+	width: 742px;
+	display: flex;
+	margin: auto;
+	padding: 30px 0;
+	.services-list {
+		width: 478px;
+		margin-right: 10px;
+	}
+	.services-item {
+		min-height: 140px;
+		font-size: 14px;
+		position: relative;
+		padding-left: 155px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 140px;
+			height: 140px;
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			.content-box-pic-style;
+		}
+		&:first-child:before {
+			background: url(../imgs/pic-1.png) center;
+		}
+		&:nth-child(2):before {
+			background: url(../imgs/pic-2.png) center;
+		}
+		&:nth-child(3):before {
+			background: url(../imgs/pic-3.png) center 185px;
+		}
+		&:nth-child(4):before {
+			background: url(../imgs/pic-4.png) center;
+		}
+		p {
+			margin: 20px 0;
+		}
+	}
+	// Sliders
+	.sliders-box {
+		width: 254px;
+		text-align: center;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.round-slider:not(:last-child) {
+		margin-bottom: 50px;
+	}
+	.slider-viewport {
+		width: 200px;
+		height: 200px;
+		margin: auto;
+		overflow: hidden;
+		.content-box-pic-style;
+	}
+	.slider-button {
+		width: 0;
+		height: 0;
+		border: 14px solid transparent;
+		margin: auto;
+		cursor: pointer;
+	}
+	.prev {
+		border-bottom-color: @mainColor;
+		margin-bottom: 20px;
+	}
+	.next {
+		border-top-color: @mainColor;
+		margin-top: 20px;
+	}
+	.slide {
+		width: 190px;
+		height: 190px;
+	}
+	.slides-wrapper {
+		font-size: 0;
+	}
+}
+
+@media screen and (max-width: 742px) {
+	.content-box {
+		width: 320px;
+		flex-direction: column-reverse;
+		// padding: 0;
+		.services-list {
+			width: 320px;
+			margin-top: 50px;
+		}
+		.services-item {
+			padding: 0 10px;
+			&:before {
+				display: none;
+			}
+		}
+		// Sliders
+		.sliders-box {
+			width: 320px;
+			h1 {
+				margin-bottom: 15px;
+			}
+		}
+		.round-slider {
+			display: flex;
+			align-items: center;
+		}
+		.slider-button {
+			margin: 0;
+			border-color: transparent;
+		}
+		.prev {
+			border-right-color: @mainColor;
+			&:hover {
+				border-color: transparent;
+				border-right-color: spin(@mainColor, -10);
+			}
+		}
+		.next {
+			border-left-color: @mainColor;
+			&:hover {
+				border-color: transparent;
+				border-left-color: spin(@mainColor, -10);
+			}
+		}
+		.slides-wrapper {
+			display: flex;
+		}
+	}
+}
