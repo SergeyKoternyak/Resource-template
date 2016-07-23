@@ -45,15 +45,19 @@
 			display: block;
 			width: 28px;
 			height: 20px;
-			margin-left: 272px;
+			margin-right: 10px;
+			float: right;
 			background: url(../imgs/menu-button.png);
 		}
 		.navigation-list {
-			width: 320px;
+			width: 100%;
 			flex-direction: column;
 		}
 		.navigation-item {
 			text-align: center;
+			&:not(:first-child):before {
+				display: none;
+			}
 		}
 	}
 }

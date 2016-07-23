@@ -37,7 +37,7 @@ body {
 }
 @media screen and (max-width: 742px) {
   .page-header-box {
-    width: 320px;
+    width: 100%;
     padding: 10px;
   }
   .page-header-box .header-logo {
@@ -108,11 +108,12 @@ body {
     display: block;
     width: 28px;
     height: 20px;
-    margin-left: 272px;
+    margin-right: 10px;
+    float: right;
     background: url(../imgs/menu-button.png);
   }
   .page-navigation-box .navigation-list {
-    width: 320px;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -121,6 +122,9 @@ body {
   }
   .page-navigation-box .navigation-item {
     text-align: center;
+  }
+  .page-navigation-box .navigation-item:not(:first-child):before {
+    display: none;
   }
 }
 .content-box {
@@ -215,7 +219,7 @@ body {
 }
 @media screen and (max-width: 742px) {
   .content-box {
-    width: 320px;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
@@ -223,7 +227,7 @@ body {
             flex-direction: column-reverse;
   }
   .content-box .services-list {
-    width: 320px;
+    width: 100%;
     margin-top: 50px;
   }
   .content-box .services-item {
@@ -233,7 +237,7 @@ body {
     display: none;
   }
   .content-box .sliders-box {
-    width: 320px;
+    width: 100%;
   }
   .content-box .sliders-box h1 {
     margin-bottom: 15px;
