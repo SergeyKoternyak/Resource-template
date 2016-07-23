@@ -273,6 +273,95 @@ body {
     display: flex;
   }
 }
+.warranty-box {
+  padding: 30px 0 30px;
+  text-align: center;
+  background: #333333;
+}
+.warranty-box h1 {
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+.warranty-box .certificate {
+  width: 210px;
+  height: 300px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.warranty-box .warranty-list {
+  display: inline-block;
+  vertical-align: top;
+}
+.warranty-box .warranty-item {
+  font-size: 20px;
+  line-height: 80px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: left;
+  padding-left: 110px;
+  position: relative;
+}
+.warranty-box .warranty-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.warranty-box .warranty-item:before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff center no-repeat;
+}
+.warranty-box .warranty-item:first-child:before {
+  background-image: url(../imgs/icon-1.png);
+}
+.warranty-box .warranty-item:nth-child(2):before {
+  background-image: url(../imgs/icon-2.png);
+}
+.warranty-box .warranty-item:nth-child(3):before {
+  background-image: url(../imgs/icon-3.png);
+}
+@media screen and (max-width: 742px) {
+  .warranty-box {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .warranty-box h1 {
+    width: 240px;
+    margin: 0 auto 50px;
+  }
+  .warranty-box .certificate {
+    width: 180px;
+    height: 270px;
+    margin: 0 auto 50px;
+  }
+  .warranty-box .warranty-list {
+    margin: auto;
+  }
+  .warranty-box .warranty-item {
+    text-align: center;
+    line-height: normal;
+    padding: 90px 80px 0;
+  }
+  .warranty-box .warranty-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .warranty-box .warranty-item:before {
+    left: 50%;
+    margin-left: -40px;
+  }
+}
 .button {
   padding: 5px 10px;
   text-transform: uppercase;
