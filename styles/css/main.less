@@ -15,6 +15,7 @@ body {
 
 @import url('page-header-box.less');
 @import url('page-navigation-box.less');
+@import url('top-slider-box.less');
 
 @import url('content-box.less');
 @import url('warranty-box.less');
@@ -62,6 +63,10 @@ h1 {
 	&:after {
 		transform: rotate(180deg);
 	}
+}
+
+.top-slider-box .flipper.is-show {
+	transform: rotateX(180deg);
 }
 
 // width: 742px;
