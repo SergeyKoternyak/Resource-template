@@ -1,0 +1,85 @@
+.send-form-box {
+	width: 670px;
+	position: absolute;
+	left: 50%;
+	margin-left: -335px;
+	top: 320px;
+	transform: skew(-20deg, 0deg);
+	background: fadeout(@secondColor, 15%);
+	padding: 10px 20px;
+	.wrapper {
+		transform: skew(20deg, 0deg);
+	}
+	form {
+		text-align: center;
+	}
+	.description {
+		margin: 10px 0 5px;
+		text-transform: uppercase;
+		font-size: 12px;
+		text-align: left;
+	}
+	input {
+		width: 150px;
+		height: 26px;
+		text-transform: uppercase;
+		padding: 0 10px;
+		border: 1px solid;
+		vertical-align: top;
+		&:focus {
+			outline-color: @mainColor;
+		}
+	}
+	input[type="text"] {
+		border-color: @thirdColor;
+	}
+	input[type="submit"] {
+		border-color: fadeout(@mainColor, 30%);
+		background: fadeout(@mainColor, 30%);
+		font-family: inherit;
+		font-weight: bold;
+		cursor: pointer;
+		font-size: 16px;
+		&:hover {
+			background: spin(@mainColor, -10);
+		}
+	}
+	.buy-form {
+		position: absolute;
+		bottom: -40px;
+		right: 10px;
+		color: @secondColor;
+	}
+	a {
+		color: @secondColor;
+		text-transform: uppercase;
+	}
+}
+
+@media screen and (max-width: 742px) {
+	.send-form-box {
+		width: 100%;
+		position: static;
+		transform: none;
+		margin: 0;
+		padding: 20px 10px 0;
+		.wrapper {
+			transform: none;
+		}
+		input {
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+		.description {
+			text-align: center;
+		}
+		.buy-form {
+			position: static;
+			color: @thirdColor;
+			width: 180px;
+			margin: auto;
+		}
+	}
+}

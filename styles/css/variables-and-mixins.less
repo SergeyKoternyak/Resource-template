@@ -1,0 +1,47 @@
+@mainColor: rgba(255, 132, 0, 1);
+@secondColor: rgba(255, 255, 255, 1);
+@thirdColor: rgba(0, 0, 0, 1);
+@fourthColor: #fdc029;
+
+.button {
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-size: 16px;
+	background: @mainColor;
+	color: @secondColor;
+	user-select: none;
+	cursor: pointer;
+	display: inline-block;
+	&:hover {
+		background: spin(@mainColor, -10);
+	}
+}
+
+h1 {
+	font-size: 26px;
+	text-transform: uppercase;
+}
+
+.content-box-pic-style {
+	border-radius: 50%;
+	border: 5px solid @secondColor;
+	box-shadow: 0px 0px 10px -1px lighten(@thirdColor, 25%);
+}
+
+.partners-box .tab.active {
+	font-weight: normal;
+	&:after {
+		display: block;
+	}
+}
+
+.partners-box .tab-list-mode.active {
+	font-weight: normal;
+	&:after {
+		transform: rotate(180deg);
+	}
+}
+
+.top-slider-box .flipper.is-show {
+	transform: rotateX(180deg);
+}

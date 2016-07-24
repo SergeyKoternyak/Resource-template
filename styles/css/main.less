@@ -1,8 +1,3 @@
-@mainColor: rgba(255, 132, 0, 1);
-@secondColor: rgba(255, 255, 255, 1);
-@thirdColor: rgba(0, 0, 0, 1);
-@fourthColor: #fdc029;
-
 @font-face {
 	font-family: 'Pfdintextcondpro';
 	src: url(../fonts/pfdintextcondpro-regular.ttf);
@@ -10,67 +5,13 @@
 body {
 	font-family: 'Pfdintextcondpro';
 }
-@import url('reset.css');
-
-
+@import url('variables-and-mixins.less');
 @import url('page-header-box.less');
 @import url('page-navigation-box.less');
 @import url('top-slider-box.less');
-
+@import url('send-form-box.less');
 @import url('content-box.less');
 @import url('warranty-box.less');
 @import url('partners-box.less');
 @import url('page-footer-box.less');
-
-
-
-
-
-.button {
-	padding: 5px 10px;
-	text-transform: uppercase;
-	font-size: 16px;
-	background: @mainColor;
-	color: @secondColor;
-	user-select: none;
-	cursor: pointer;
-	display: inline-block;
-	&:hover {
-		background: spin(@mainColor, -10);
-	}
-}
-
-h1 {
-	font-size: 26px;
-	text-transform: uppercase;
-}
-
-.content-box-pic-style {
-	border-radius: 50%;
-	border: 5px solid @secondColor;
-	box-shadow: 0px 0px 10px -1px lighten(@thirdColor, 25%);
-}
-
-.partners-box .tab.active {
-	font-weight: normal;
-	&:after {
-		display: block;
-	}
-}
-
-.partners-box .tab-list-mode.active {
-	font-weight: normal;
-	&:after {
-		transform: rotate(180deg);
-	}
-}
-
-.top-slider-box .flipper.is-show {
-	transform: rotateX(180deg);
-}
-
-// width: 742px;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	margin: auto;
+@import url('reset.css');
