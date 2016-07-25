@@ -1,0 +1,17 @@
+{
+  "name": "Resource",
+  "version": "1.0.0",
+  "description": "Single page template",
+  "scripts": {
+    "build": "node ./node_modules/less/bin/lessc ./styles/css/main.less ./styles/css/main.css && node ./node_modules/postcss-cli/bin/postcss --use autoprefixer styles/css/main.css -d styles/css"
+  },
+  "author": "Sergey Koternyak <sergeykoternyak@gmail.com>",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "less": "^2.7.1",
+    "postcss-cli": "^2.5.2"
+  }
+}
