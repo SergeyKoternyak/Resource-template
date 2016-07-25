@@ -69,10 +69,16 @@
 	.prev {
 		border-bottom-color: @mainColor;
 		margin-bottom: 20px;
+		&:hover {
+			border-bottom-color: spin(@mainColor, -10);
+		}
 	}
 	.next {
 		border-top-color: @mainColor;
 		margin-top: 20px;
+		&:hover {
+			border-top-color: spin(@mainColor, -10);
+		}
 	}
 	.slide {
 		width: 190px;

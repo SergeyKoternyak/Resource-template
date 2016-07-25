@@ -19,7 +19,18 @@ $(function(){
 		$(el).hasClass('is-show') ? $(el).removeClass('is-show') : $(el).addClass('is-show');
 	}, 3000);
 
+	// Certificate
+	$('.certificate').click(function(){
+		$('.certificate-zoom-box').show();
+	});
+
+	$('.certificate-zoom-box').click(function(){
+		$(this).hide()
+	});
+
 	// Partners list
+	$(".tab-content:first").show();
+
 	$(".tab-list-mode, .tab").click(function(){
 		if(!$(this).hasClass('active')) {
 			$(".tab-content").hide();
@@ -27,7 +38,9 @@ $(function(){
 			$($(this).hasClass('tab') ? '.tab' : '.tab-list-mode').removeClass("active");
 			$(this).addClass("active");
 			$($(this).hasClass('tab') ? '.tab-list-mode' : '.tab').removeClass("active");
-			$(($(this).hasClass('tab') ? '.tab-list-mode' : '.tab') + "[data-name^='" + $(this).attr("data-name") + "']").addClass("active");
+			$(($(this).hasClass('tab') ? '.tab-list-mode' : '.tab') + "[data-name^='" + $(this)
+				.attr("data-name") + "']")
+				.addClass("active");
 		} else{
 			$(".tab-content").hide();
 			$(".tab-list-mode, .tab").removeClass("active");
@@ -37,34 +50,30 @@ $(function(){
 	// Round sliders
 	function roundSlider(name) {
 		var slideWidth = $(name+' .slide').width();
-		var slideSum = $(name+' .slide').length;
 		var $slideWrapper = $(name+' .slides-wrapper');
 
-	// CSS slide-wrapper width
-		$slideWrapper.width(slideSum*slideWidth);
-
-	// Обработчики кнопок вперед/назад
 		$(name+' .next').click(function(){
+			var marginSide = window.matchMedia("(max-width: 742px)").matches ? 'margin-left' : 'margin-top';
+
 			if ($slideWrapper.is(':animated')==false){
-				if (window.matchMedia("(max-width: 742px)").matches) {
-					$slideWrapper.animate({'margin-left': -slideWidth}, function(){
-						$slideWrapper.find('.slide:first').appendTo($slideWrapper).parent().css({'margin-left': 0});
-					});
-				} else{
-					$slideWrapper.animate({'margin-top': -slideWidth}, function(){
-						$slideWrapper.find('.slide:first').appendTo($slideWrapper).parent().css({'margin-top': 0});
-					});
-				}
+				$slideWrapper.animate({[marginSide] : -slideWidth}, function(){
+					$slideWrapper.find('.slide:first')
+					.appendTo($slideWrapper)
+					.parent()
+					.css({[marginSide] : 0});
+				});
 			};
 		});
 
 		$(name+' .prev').click(function(){
+			var marginSide = window.matchMedia("(max-width: 742px)").matches ? 'margin-left' : 'margin-top';
+
 			if ($slideWrapper.is(':animated')==false){
-				if (window.matchMedia("(max-width: 742px)").matches) {
-					$slideWrapper.find('.slide:last').prependTo($slideWrapper).parent().css({'margin-left': -slideWidth}).animate({'margin-left': 0});
-				} else{
-					$slideWrapper.find('.slide:last').prependTo($slideWrapper).parent().css({'margin-top': -slideWidth}).animate({'margin-top': 0});
-				}
+				$slideWrapper.find('.slide:last')
+				.prependTo($slideWrapper)
+				.parent()
+				.css({[marginSide] : -slideWidth})
+				.animate({[marginSide] : 0});
 			}
 		});
 	}
